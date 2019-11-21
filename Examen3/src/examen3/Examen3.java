@@ -61,11 +61,11 @@ static Scanner cs=new Scanner(System.in);
         }        
         return M;
     }
-     public static int[][] suma2MatricesSimetricos(int[][] A, int[][] B){
+     public static int[][] resta2MatricesSimetricos(int[][] A, int[][] B){
         int [][] NM=new int[A.length][A[0].length];
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[0].length; j++) {
-                NM[i][j]=A[i][j]-B[i][j];
+                NM[i][j]=A[i][j]- B[i][j];
             }
         }
         return NM;
@@ -73,7 +73,7 @@ static Scanner cs=new Scanner(System.in);
          public static void main(String[] args) {
              //imprimirMatriz(ejercicio24());
              //imprimirMatriz(ejercicio32());
-             imprimirMatriz(suma2MatricesSimetricos(ejercicio24(),ejercicio32()));
+             imprimirMatriz(resta2MatricesSimetricos(ejercicio24(),ejercicio32()));
     }
 
 }
