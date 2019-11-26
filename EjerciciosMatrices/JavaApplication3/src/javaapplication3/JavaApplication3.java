@@ -78,23 +78,7 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
         }        
         return M;
         }
-    public static int[][] transformada05(){
-        System.out.println("Ingrese la Dimension de la Matriz:");
-        int dim=cs.nextInt();
-        int[][] M=new int[dim][dim];
-        System.out.println("Ingrese el numero de Inicio:");
-        int numInit=cs.nextInt();
-        for (int i = 0; i < dim; i++) {
-            for (int j = 0; j < dim-1; j++) {                
-                if((i+j)%2==0){
-                M[i][j]=numInit+(i+j)*(i+j+1)/2 + j;      
-                }else{
-                M[i][j]=numInit+(i+j)*(i+j+1)/2 + i;      
-                }                
-            }
-        }        
-        return M;
-        }
+    
     
     public static int[][] transformada06(){
         System.out.println("Ingrese la Dimension de la Matriz:");
@@ -110,7 +94,40 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
         }        
         return M;
         }
+    public static int [][] transformada07(){
+      Scanner lt=new Scanner(System.in);
+        System.out.print("ingrese la dimencion de la matriz ");
+        int dim=lt.nextInt();
+        int [][]M=new int [dim][dim];
+        System.out.print("ingrese direccionando base");
+        int munit=lt.nextInt();
+        for (int i = 0; i <dim; i++) {
+            for (int j = 0; j <dim-i; j++) {               
+                M[i][j]=munit;
+                munit++;
+            
+            }
+        }    
+        return M;
+    }
     
+    public static int [][] transformada12(){
+      Scanner lt=new Scanner(System.in);
+        System.out.print("ingrese la dimencion de la matriz: ");
+        int dim=lt.nextInt();
+        int [][]M=new int [dim][dim];
+        System.out.print("ingrese direccionando base:");
+        int munit=lt.nextInt();
+        for(int j = 0; j <dim; j++) {
+            for(int i = dim-1; i >=0+j; i--) {               
+                M[j][i]=munit;
+                munit++;
+            
+            }
+        }
+        
+        return M;
+    }
     public static int[][] transformada15(){
         System.out.println("Ingrese la Dimension de la Matriz:");
         int dim=cs.nextInt();
@@ -160,7 +177,45 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
         }
         return M;
         }
-    
+    public static int[][] transformada22(){
+        System.out.println("Ingrese la Dimension de la Matriz:");
+        int dim=cs.nextInt();
+        int[][] M=new int[dim][dim];
+        System.out.println("Ingrese el numero de Inicio:");
+        int numInit=cs.nextInt();//dim=5 numInit=0
+        for(int j = 0; j <dim; j++){
+            if(j%2==0){
+            
+            for (int i = dim-1; i >=0; i--) {                
+                M[i][j]=numInit;
+                numInit++;}            
+            }else{
+            for (int i = 0; i <dim; i++) {                
+                M[i][j]=numInit;
+                numInit++; }
+        }}
+        return M;
+        }
+   public static int[][] transformada23(){
+        System.out.println("Ingrese la Dimension de la Matriz:");
+        int dim=cs.nextInt();
+        int[][] M=new int[dim][dim];
+        System.out.println("Ingrese el numero de Inicio:");
+        int numInit=cs.nextInt();//dim=5 numInit=0
+        for(int j = dim-1; j>=0; j--){
+            if(j%2==0){
+                for (int i = 0; i <dim; i++) {                
+                M[i][j]=numInit;
+                numInit++;}      
+            }else{
+            
+                for (int i = dim-1; i >=0; i--) { //              
+                M[i][j]=numInit;
+                numInit++; }             
+            }
+        }
+        return M;
+        }
     public static int[][] transformada24(){
         System.out.println("Ingrese la Dimension de la Matriz:");
         int dim=cs.nextInt();
@@ -186,71 +241,41 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
         int[][] M=new int[dim][dim];
         System.out.println("Ingrese el numero de Inicio:");
         int numInit=cs.nextInt();//dim=5 numInit=0
-        for(int j = 0; j>dim; j++){
-            for (int i =0; i >dim; i++) {               
-                M[i][j]=numInit;
-                numInit++;            
-            }
-        }
-        return M;
-        }
-      public static int[][] transformada26(){
-        System.out.println("Ingrese la Dimension de la Matriz:");
-        int dim=cs.nextInt();
-        int[][] M=new int[dim][dim];
-        System.out.println("Ingrese el numero de Inicio:");
-        int numInit=cs.nextInt();//dim=5 numInit=0
-        for(int j = dim-1; j>=0; j--){
+        for(int j = 0; j <dim; j++){
             if(j%2==0){
-            for (int i = dim-1; i >=0; i--) { //              
-                M[i][j]=numInit;
+            for (int i = 0; i <dim; i++) {                
+                M[j][i]=numInit;
                 numInit++; }            
             }else{
-            for (int i = 0; i <dim; i++) {                
-                M[i][j]=numInit;
+            for (int i = dim-1; i >=0; i--) {                
+                M[j][i]=numInit;
                 numInit++;}            
             }
         }
         return M;
         }
-       public static int[][] transformada27(){
+     public static int[][] transformada26(){
         System.out.println("Ingrese la Dimension de la Matriz:");
         int dim=cs.nextInt();
         int[][] M=new int[dim][dim];
         System.out.println("Ingrese el numero de Inicio:");
         int numInit=cs.nextInt();//dim=5 numInit=0
-        for(int j = dim-1; j>=0; j--){
+        for(int j = 0; j <dim; j++){
             if(j%2==0){
-            for (int i = dim-1; i >=0; i--) { //              
-                M[i][j]=numInit;
-                numInit++; }            
+                for (int i = dim-1; i >=0; i--) {                
+                M[j][i]=numInit;
+                numInit++;}  
+                        
             }else{
-            for (int i = 0; i <dim; i++) {                
-                M[i][j]=numInit;
-                numInit++;}            
+                for (int i = 0; i <dim; i++) {                
+                M[j][i]=numInit;
+                numInit++; }      
             }
         }
         return M;
         }
-        public static int[][] transformada28(){
-        System.out.println("Ingrese la Dimension de la Matriz:");
-        int dim=cs.nextInt();
-        int[][] M=new int[dim][dim];
-        System.out.println("Ingrese el numero de Inicio:");
-        int numInit=cs.nextInt();//dim=5 numInit=0
-        for(int j = dim-1; j>=0; j--){
-            if(j%2==0){
-            for (int i = dim-1; i >=0; i--) { //              
-                M[i][j]=numInit;
-                numInit++; }            
-            }else{
-            for (int i = 0; i <dim; i++) {                
-                M[i][j]=numInit;
-                numInit++;}            
-            }
-        }
-        return M;
-        }
+     
+    
         public static int[][] transformCaracol29(){
     System.out.println("Ingrese la Dimension de la Matriz:");
     int dim=cs.nextInt();
@@ -504,12 +529,38 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
               imprimirMatriz(transformada04());
               break;
             }
-            case 5:{//error
-                imprimirMatriz(transformada05());
-                break;
-            }
+            
             case 6:{
                 imprimirMatriz(transformada06());
+                break;
+            }
+            case 7:{
+                imprimirMatriz(transformada07());
+                break;
+            }
+            
+            case 12:{
+                imprimirMatriz(transformada12());
+                break;
+            }
+            case 15:{
+                imprimirMatriz(transformada15());
+                break;
+            }
+            case 16:{
+                imprimirMatriz(transformada16());
+                break;
+            }
+            case 21:{
+                imprimirMatriz(transformada21());
+                break;
+            }
+            case 22:{
+                imprimirMatriz(transformada22());
+                break;
+            }
+            case 23:{
+                imprimirMatriz(transformada23());
                 break;
             }
             case 24:{
@@ -518,6 +569,10 @@ public class JavaApplication3 {//Jesus Daniel Yanapa Crespo
             }
             case 25:{
                 imprimirMatriz(transformada25());
+                break;
+            }
+            case 26:{
+                imprimirMatriz(transformada26());
                 break;
             }
             case 29:{
